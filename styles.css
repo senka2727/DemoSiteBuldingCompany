@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+html, body{
+    width: 100%;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+a:hover{
+    color: #FF6501;
+}
+
+p {
+    cursor: default;
+}
+
+h1, h4, h5 {
+    cursor: default;
+}
+
+.Large {
+    font-family: segoe-ui, sans-serif;
+    font-style: normal;
+    font-weight: 200;
+
+    font-size: 150px;
+
+    color: black;
+
+    margin: 0;
+}
+
+.Big {
+    font-family: segoe-ui, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1;
+
+    font-size: 50px;
+
+    color: black;
+}
+
+.BigS {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 25px;
+
+    color: black;
+}
+
+.Normal {
+    font-family: segoe-ui, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 20px;
+
+    color: black;
+}
+
+.NormalGrey {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    font-size: 17px;
+
+    color: #C4C4C7;
+}
+
+/* HEADER */
+
+.HeaderWrapper {
+    width: 100%;
+    height: 225px;
+}
+
+header {
+    width: 85%;
+    height: 76px;
+
+    position: absolute;
+    top: 15px;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+header .LeftSide {
+    width: 35%;
+    height: 100%;
+}
+
+header .LeftSide .Logo {
+    width: 3.5vw;
+    height: 3.5vw;
+
+    display: inline-block;
+
+    margin: 0;
+
+    cursor: pointer;
+
+    background: black;
+
+    -webkit-mask: url("Images/CompanyLogo.svg") no-repeat center / contain;
+    mask: url("Images/CompanyLogo.svg") no-repeat center / contain;
+
+    transition: 1s ease-in-out;
+}
+
+header .LeftSide .Logo:hover{
+    background: linear-gradient(to right, #D400B8, #80D111);
+}
+
+header .LeftSide h4 {
+    height: 5px;
+    display: inline-block;
+
+    font-size: 4vw;
+
+    margin: 0;
+    margin-left: 15px;
+}
+
+header .RightSide {
+    width: 40%;
+    height: 100%s;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .RightSide .Buttons {
+    width: 70%;
+}
+
+header .RightSide .Buttons a {
+    width: 100%;
+    display: block;
+}
+
+header .RightSide .LanguageSelection {
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+header .RightSide .LanguageSelection a{
+    width: 60px;
+    height: 25px;
+
+    margin-top: 10px;
+
+    font-family: segoe-ui, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+
+    font-size: 20px;
+
+    color: black;
+
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    cursor: pointer;
+}
+
+header .RightSide .LanguageSelection a:hover{
+    color: #1A75FF;
+}
+
+/* NAVBAR */
+nav {
+    width: 13%;
+
+    position: fixed;
+    top: 15px;
+    left: 15px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+nav .BigS {
+    display: inline;
+    width: 100%;
+    font-size: 18px;
+}
+
+nav .HooksMenu {
+    width: 100%;
+    height: 24px;
+    overflow: hidden;
+    transition: height 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: height 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+nav .HooksMenu:hover {
+    height: 95px;
+}
+
+nav .HooksMenu .NormalGrey{
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+nav .HooksMenu:hover .NormalGrey{
+    opacity: 1;
+}
+
+@media (max-width: 750px){
+    nav {
+        display: none;
+    }
+
+    header {
+        width: 100%;
+        /* justify-content: space-around; */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .LeftSide {
+        width: 100%;
+        text-align: center;
+    }
+
+    header .LeftSide .Big{
+        margin-left: 5px;
+        font-size: 50px;
+    }
+
+    header .LeftSide .Logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    header .RightSide {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    header .RightSide .BigS {
+        font-size: 15px;
+    }
+}
+
+/* SECTION */
+.SectionWrapper {
+    width: 100%;
+    height: 185rem;
+
+    display: flex;
+    justify-content: center;
+}
+
+.Section {
+    width: 70%;
+    height: 80%;
+}
+
+.Section .SectionTaggedImage {
+    width: 100%;
+    position: relative;
+}
+
+.Section .SectionTaggedImage img {
+    width: 100%;
+    display: block;
+}
+
+.Section .SectionTaggedImage .Tags {
+    position: absolute;
+    bottom: 15px;
+    right: -10px; 
+    display: flex;
+    gap: 5px;
+}
+
+@media (max-width: 1030px){
+    .SectionWrapper {
+        width: 100%;
+    }
+
+    .Section {
+        width: 100%;
+    }
+
+    .Section .SectionTaggedImage .Tags {
+        right: 10px;
+    }
+}
+
+/* TAGS MAIN SETUP */
+.TagG, .TagO, .TagB {
+    width: 100px;
+    height: 30px;
+
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    z-index: 1;
+}
+
+.TagG p, .TagO p, .TagB p{
+    font-size: 13px;
+    margin: 0;
+}
+
+/* GREEN TAG */
+.Section .SectionTaggedImage .Tags .TagG {
+    background-color: #7CDF93;
+}
+
+.Section .SectionTaggedImage .Tags .TagG p{
+    color: black;
+}
+
+/* ORANGE TAG */
+.Section .SectionTaggedImage .Tags .TagO {
+    background-color: #FF6501;
+}
+
+.Section .SectionTaggedImage .Tags .TagO p{
+    color: white;
+}
+
+/* BLACK TAG */
+.Section .SectionTaggedImage .Tags .TagB {
+    background-color: black;
+}
+
+.Section .SectionTaggedImage .Tags .TagB p{
+    color: white;
+}
+
+.Section .Large {
+    font-size: 10vw;
+
+    text-align: center;
+    margin: 0;
+
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.Section .Large:hover {
+    color: #FF6501;
+}
+
+.Section .Text {
+    width: 100%;
+    /* height: 115px; */
+
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.Section .Text .Element {
+    width: 40%;
+    height: 100%;
+
+    margin-left: 5vw;
+}
+
+.Section .Text .Stats {
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 725px){
+    .SectionWrapper {
+        height: auto;
+    }
+
+    .Section .Text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Section .Text .Element {
+        width: 90%;
+    }
+
+    .Section .Text .Stats {
+        width: 70%;
+    }
+}
+
+.Section .Text .Stats .RightSide p {
+    margin: 17px;
+}
+
+.Cards {
+    width: 100%;
+    
+    margin-top: 64px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.Cards .LeftCard, .Cards .RightCard {
+    width: 49%;
+}
+
+.Cards .LeftCard img, .Cards .RightCard img {
+    width: 100%;
+}
+
+.Cards .LeftCard .Big, .Cards .RightCard .Big {
+    font-size: 2.5vw;
+
+    text-transform: uppercase;
+
+    margin-top: 2vw;
+    margin-bottom: 0;
+
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+
+.Cards .LeftCard .Big:hover, .Cards .RightCard .Big:hover {
+    color: #1A75FF;
+}
+
+.Cards .LeftCard .p, .Cards .RightCard .p {
+    font-size: 1vw;
+    margin-bottom: 0;
+
+    width: 80%;
+}
+
+.Cards .RightCard {
+    margin-top: 11vw;
+}
+
+@media (max-width: 725px){
+    .Cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Cards .RightCard, .Cards .LeftCard {
+        width: 100%;
+        /* text-align: center; */
+    }
+
+    .Cards .LeftCard img, .Cards .RightCard img {
+        width: 70%;
+        height: auto;
+        margin: auto;
+    }
+
+    .Cards .RightCard .Big, .Cards .LeftCard .Big {
+        font-size: 25px;
+        padding-left: 25px;
+    }
+
+    .Cards .LeftCard .Normal, .Cards .RightCard .Normal {
+        padding-left: 10px;
+    }
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 10vw;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: underline;
+    margin: 0;
+
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    font-size: 18px;
+
+    color: #C4C4C7;
+}
+
+footer p {
+    margin: 0;
+
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    font-size: 17px;
+
+    color: #C4C4C7;
+}
+
+@media (max-width: 725px){
+    footer {
+        height: 35vw;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer a, footer p{
+        font-size: 3vw;
+    }
+}
